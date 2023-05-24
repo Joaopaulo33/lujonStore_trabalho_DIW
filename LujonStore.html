@@ -1,0 +1,891 @@
+<style>
+    * {
+        font-family: 'Roboto';
+    }
+
+    p {
+        margin: 0;
+    }
+
+    #container_principal {
+        padding: 12px;
+    }
+
+    #logo {
+        min-width: 118px;
+    }
+
+    header button {
+        background-color: #3cbcd5;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: #fff;
+        height: 45px;
+        top: -12px;
+        border: 0;
+
+    }
+
+
+    header input {
+        background: #fff;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+        height: 45px;
+        padding-left: 22px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: .875rem;
+        display: inline;
+        max-width: 615px;
+    }
+
+    header img {
+        width: 15vw;
+    }
+
+
+    .input-label {
+        position: relative;
+        height: 100%;
+        display: flex;
+        margin-top: 50px;
+    }
+
+    #icon_content_input {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #text_cash {
+        margin-top: 30px;
+
+    }
+
+    #div_informations_customer>p {
+        font-size: 0.8rem;
+    }
+
+    #div_register {
+        gap: 18px;
+        display: flex;
+    }
+
+    #div_register a {
+        font-size: 14px;
+    }
+
+    .carousel-inner {
+        margin-left: 68px;
+
+    }
+
+    #order_cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 74px;
+        height: 40px;
+        background-color: #3cbcd5;
+        color: fff;
+        font-size: 0.9rem;
+    }
+
+    #order_cart svg {
+        color: #fff;
+        width: 20px;
+        height: 48px;
+    }
+
+    #company_information {
+        background-color: rgba(0, 0, 0, 0.145);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    #order_cart p {
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+    #container_cart {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding-bottom: 27px;
+        padding-left: 57px;
+    }
+
+    #number_itens_container {
+        display: block;
+        right: 142px;
+        top: 53px;
+    }
+
+    #number_itens_content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background-color: #5a5a5a;
+        border-radius: 50px;
+        margin-left: 75px;
+        margin-top: -12px;
+    }
+
+    #find_product_and_carrousel {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    #find_products {
+        border: 2px;
+        border-style: solid;
+        padding: 15px 15px 25px 15px;
+        background-color: #e4b8dc57;
+        margin-left: 12%;
+        border-radius: 10px;
+
+    }
+
+    #find_products p {
+        font-size: 1rem;
+    }
+
+    #find_products select {
+        padding: 2px;
+        font-size: 0.8rem;
+        width: 300px;
+        margin-top: 11px;
+    }
+
+    #find_products button {
+        padding: 2px;
+        font-size: 0.8rem;
+        width: 300px;
+        margin-top: 15px;
+        height: 50px;
+        background-color: #d3f3f696;
+    }
+
+    #div_valores {
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+
+    #div_valores input {
+        max-width: 138px;
+        height: 39px;
+    }
+
+    #carousel_images {
+        margin: 0 50px;
+    }
+
+    .div_product_container {
+        width: 120px;
+        height: 290px;
+        margin: 20px;
+        border-style: solid;
+        border: 1.5px;
+        padding: 15px;
+        box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+        max-width: 254px;
+    }
+
+    .div_product_content {
+        justify-content: center;
+        display: flex;
+        height: 173px;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
+
+    .div_product_content img {
+        margin-top: 74px;
+        margin-bottom: 5px;
+        border-radius: 50px;
+        height: 124%;
+        width: 88%;
+    }
+
+    .div_product_content p {
+        margin: 0;
+    }
+
+    #reviewed_itens {
+        border: 2px;
+        border-style: solid;
+        padding: 5px;
+    }
+
+    #itens_recomend {
+        display: flex;
+        justify-content: center;
+    }
+
+    #div_newsletter {
+        border: 2px;
+        border-style: solid;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    #div_newsletter button {
+        margin-left: auto;
+        margin-right: 67px;
+        background-color: #d3f3f696;
+
+    }
+
+    #div_newsletter h5 {
+        margin: 0;
+    }
+
+    .div_image_product_review img {
+        max-width: 150px;
+    }
+
+    footer {
+        background-color: #5a5a5a3c;
+        /* padding: 15px 15px 0 15px; */
+    }
+
+
+    footer i {
+        font-size: 2rem;
+    }
+
+    #informacoes_footer {
+        padding: 40px
+    }
+
+    #informacoes_footer a {
+        display: block;
+    }
+
+    #informacoes_footer h5 {
+        margin-bottom: 10px;
+    }
+
+    .info_group {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 992px){
+ 
+    .carousel-inner {
+        /* margin-left: 68px; */
+        width: 100%;
+        padding: 0;
+            margin: 0;
+    }
+    #carousel_images{
+        margin-left: 68px;
+        width: 100%;
+    }
+    
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container_principal">
+        <header class="p-3">
+            <div class="row">
+                <div class="col-lg-2">
+                    <img id="logo" src="https://cdn.awsli.com.br/400x300/1651/1651494/logo/008d2b5872.png"
+                        alt="Lujon Store ">
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <p>Bem-vinda(o) à LujonStore!</p>
+                    <div class="input-label">
+                        <input id="search-input" placeholder="Procurar produto, categoria, vendedores, marca.">
+                        <button>
+                            <div id="icon_content_input">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                Procurar
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div id="div_register">
+                        <span><a href="">Entrar</a></span>
+                        <span>|</span>
+                        <span><a href="">Cadastrar-se</a></span>
+                        <span>|</span>
+                        <span><a href="">Minha conta</a></span>
+                        <span>|</span>
+                        <span><a href="">Acompanhar pedido</a></span>
+                    </div>
+                    <div style="display:flex;flex-direction: row;">
+                        <div id="div_informations_customer">
+                            <p id="text_cash">
+                                Frete | Devolução em 30 dias
+
+                            </p>
+                            <p>
+                                02/04 SAC 0800 4002 8922</b>
+                            </p>
+                        </div>
+                        <div id="container_cart">
+                            <div id="order_cart">
+                                <div id="number_itens_content">
+                                    0
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                <p>CARRINHO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-lg-3 mt-4">
+                <div id="find_product_and_carrousel">
+                    <aside id="find_products">
+                        <p>
+                            <b>
+                                Procurar produtos - Escolha o produto
+                            </b>
+                        </p>
+                        <p>
+                            Encontre os produtos certos com o preço certo!
+                        </p>
+                        <div>
+                            <select data-container="body" class="form-control selectpicker" title="Nada selecionado"
+                                data-live-search="true" data-actions-box="true" tabindex="-98">
+                                <option class="bs-title-option" value="">Selecione o tipo</option>
+                            </select>
+
+                        </div>
+                        <div>
+                            <select data-container="body" class="form-control selectpicker" title="Nada selecionado"
+                                data-live-search="true" data-actions-box="true" tabindex="-98">
+                                <option class="bs-title-option" value="">Selecione a marca</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select data-container="body" class="form-control selectpicker" title="Nada selecionado"
+                                data-live-search="true" data-actions-box="true" tabindex="-98">
+                                <option class="bs-title-option" value="">Selecione a categoria</option>
+                            </select>
+                        </div>
+                        <div id="div_valores">
+                            <span>
+                                $
+                            </span>
+                            <span>
+                                <input type="text" placeholder="De">
+                            </span>
+                            <span>
+                                $
+                            </span>
+                            <input type="text" placeholder="Até">
+                        </div>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                </path>
+                            </svg>
+                            Procurar
+                        </button>
+
+                    </aside>
+                </div>
+            </div>
+            <div class="col-lg-9 mt-3">
+
+                <div id="carousel_images" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel_images" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel_images" data-slide-to="1"></li>
+                        <li data-target="#carousel_images" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://piercing.ornami.com.br/imagens/ornami-banner1.jpg"
+                                alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://piercing.ornami.com.br/imagens/ornami-banner3.jpg"
+                                alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://piercing.ornami.com.br/imagens/ornami-banner2.jpg"
+                                alt="Second slide">
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel_images" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel_images" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="row ml-4">
+                <div class="col-lg-9">
+                    <div id="products">
+                        <div class="row">
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109461111/baa247036a.jpg"
+                                        alt="">
+                                    <p href="">Argola D-ring em titânio</p>
+
+                                    <p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <span>(25)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:30,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$60
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/66012293/bf178e1d0d.jpg"
+                                        alt="">
+                                    <p href="">Piercing Barbell Circular</p>
+                                    <p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <span>(4)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:18,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$36
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109225431/2a1036277b.jpg"
+                                        alt="">
+                                    <p href="">Argola segmentada em titânio</p>
+                                    <p><i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <span>(45)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:30,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$60
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109471775/c32aa50d7a.jpg"
+                                        alt="">
+                                    <p href="">Piercing de umbigo com 4 zircônias</p>
+                                    <p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <span>(7)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:35,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$70
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/66012753/936e3f468b.jpg"
+                                        alt="">
+                                    <p href="">Piercing Daith Coração </p>
+                                    <p><i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <span>(13)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:10,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$20
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109457451/f3e10284ee.jpg"
+                                        alt="">
+                                    <p href="">Piercing umbigo de flor</p>
+                                    <p><i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <span>(1)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:35,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$70
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109272712/41e520370d.jpg"
+                                        alt="">
+                                    <p href="">Piercing de umbigo comum</p>
+                                    <p><i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <span>(12)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:30,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$60
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109466951/d76ec95124.jpg"
+                                        alt="">
+                                    <p href="">Piercing Transversal de flecha.</p>
+                                    <p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+
+                                        <span>(12)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:30,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$60
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 div_product_container">
+                                <div class="col-lg-12 div_product_content">
+                                    <img src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109465971/b0f08dbc40.jpg"
+                                        alt="">
+                                    <p href="">Piercing de umbigo coração</p>
+                                    <p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+
+                                        <span>(12)</span>
+                                    </p>
+                                    <p>
+                                        <b>
+                                            R$:30,00
+                                        </b>
+                                        50% OFF
+                                        <s>
+                                            R$60
+                                        </s>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <aside id="reviewed_itens">
+                        <div id="itens_recomend">
+                            <p>Pesquisas recentes</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 div_image_product_review">
+                                <img style="width: 80%;"
+                                    src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109226518/79b7abc7f8.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <p href="">Piercing ferradura com strass. </p>
+                                <p><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span>(29)</span>
+                                </p>
+                                <p>
+                                    <b>
+                                        R$:20,00
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-6 div_image_product_review">
+                                <img style="width: 80%;"
+                                    src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109469738/d13cffb058.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <p href="">Piercing de umbigo zircônia pendurada. </p>
+                                <p><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span>(40)</span>
+                                </p>
+                                <p>
+                                    <b>
+                                        R$:35,00
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-6 div_image_product_review">
+                                <img style="width: 80%;"
+                                    src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/108437512/80d52ce101.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <p href="">Argola para nariz(aba nasal) </p>
+                                <p><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span>(25)</span>
+                                </p>
+                                <p>
+                                    <b>
+                                        R$:20,00
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-6 div_image_product_review">
+                                <img style="width: 80%;"
+                                    src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/66012023/480e177902.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <p href="">Piercing Barbell Curvo (Banana) </p>
+                                <p><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+
+
+                                    <span>(63)</span>
+                                </p>
+                                <p>
+                                    <b>
+                                        R$:30,00
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                    </aside>
+                    <div id="div_newsletter">
+                        <h5>
+                            NewsLetter
+                        </h5>
+
+                        <br>
+                        <p>
+                            Se inscreva para receber novidades.
+                        </p>
+                        <input type="text" class="form-group" name="" id="">
+                        <button>Junte-se</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </main>
+    </div>
+    <footer>
+        <div class="row" id="informacoes_footer">
+            <div class="col-lg-3 info_group">
+                <h5>Formas de pagamento</h5>
+                <div>
+                    <i class="bi bi-credit-card-2-front-fill  "></i>
+                    <i class="bi bi-credit-card-fill"></i>
+                    <i class="bi bi-alipay"></i>
+                </div>
+                <div>
+                    <i class="bi bi-stripe"></i>
+                    <i class="bi bi-paypal"></i>
+                </div>
+                <div>
+                    <i class="bi bi-cash-coin"></i>
+                    <i class="bi bi-currency-bitcoin"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 info_group">
+                <h5>Links úteis</h5>
+                <a href="">Ajuda</a>
+                <a href="">Políticas de envio</a>
+                <a href="">Cacelamentos e devoluções</a>
+                <a href="">SAC</a>
+                <a href="">Política de privacidade</a>
+            </div>
+            <div class="col-lg-3 info_group">
+                <h5>Redes sociais</h5>
+                <div>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                </div>
+
+            </div>
+            <div class="col-lg-3 info_group">
+                <h5>Fale conosco</h5>
+                <div>
+                    <i class="bi bi-envelope" style="display: inline;"></i>
+                    <p>lujonstore@gmail.com</p>
+                    <i class="bi bi-whatsapp"></i>
+                    <p>(31)4002-8922</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" id="company_information">
+            <span>
+                <i class="bi bi-c-circle" style="font-size: 1rem;"></i> 2019 - 2023 lujonstore.com.br
+            </span>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+<script src="./script.js"></script>
+
+</html>
