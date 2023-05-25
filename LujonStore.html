@@ -2,7 +2,13 @@
     * {
         font-family: 'Roboto';
     }
-
+    button{
+        cursor: pointer;
+    }
+    button:hover{
+        opacity: 0.7;
+        transition: 0.2s;
+    }
     p {
         margin: 0;
     }
@@ -144,17 +150,18 @@
     }
 
     #find_products {
-        border: 2px;
+        border: 0.1px;
         border-style: solid;
         padding: 15px 15px 25px 15px;
-        background-color: #e4b8dc57;
+        background-color: #cdedfc57;
         margin-left: 12%;
         border-radius: 10px;
 
     }
 
-    #find_products p {
-        font-size: 1rem;
+    #find_products b {
+        font-size: 1.3rem;
+        font-weight: 400;
     }
 
     #find_products select {
@@ -170,7 +177,7 @@
         width: 300px;
         margin-top: 15px;
         height: 50px;
-        background-color: #d3f3f696;
+        background-color: #ffffff96;
     }
 
     #div_valores {
@@ -212,7 +219,7 @@
         margin-bottom: 5px;
         border-radius: 50px;
         height: 124%;
-        max-height: 174px;
+        max-height: 149px;
         width: 88%;
     }
 
@@ -221,8 +228,9 @@
     }
 
     #reviewed_itens {
+        max-width: 241px;
         border: 2px;
-        border-style: solid;
+        /* border-style: solid; */
         padding: 5px;
     }
 
@@ -232,7 +240,7 @@
     }
 
     #div_newsletter {
-        border: 2px;
+        border: 1px;
         border-style: solid;
         padding: 5px;
         display: flex;
@@ -240,12 +248,18 @@
         align-items: center;
         flex-direction: column;
         margin-top: 10px;
+        max-width: 320px;
+        border-radius: 5px;
     }
 
     #div_newsletter button {
         margin-left: auto;
         margin-right: 67px;
-        background-color: #d3f3f696;
+        border: solid 0.3px;
+        padding: 8px 19px;
+        border-radius: 100px;
+        background-color: #3cbcd5;
+        color: white;
 
     }
 
@@ -337,9 +351,12 @@
                 </div>
                 <div class="col-lg-6 mt-4">
                     <p>Bem-vinda(o) à LujonStore!</p>
+                    <p><b>Aluno:</b>João Paulo Cardoso dos Santos</p>
+                    <p><b>Matrícula:</b>824586</p>
+                    <p><b>Curso:</b>Sistemas de informação</p>
                     <div class="input-label">
-                        <input id="search-input" placeholder="Procurar produto, categoria, vendedores, marca.">
-                        <button>
+                        <input id="search-input" placeholder="Procurar produto">
+                        <button id="button_search">
                             <div id="icon_content_input">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -406,27 +423,15 @@
                         </p>
                         <p>
                             Encontre os produtos certos com o preço certo!
-                        </p>
+                        </p>            
                         <div>
-                            <select data-container="body" class="form-control selectpicker" title="Nada selecionado"
-                                data-live-search="true" data-actions-box="true" tabindex="-98">
-                                <option class="bs-title-option" value="">Selecione o tipo</option>
-                            </select>
-
-                        </div>
-                        <div>
-                            <select data-container="body" class="form-control selectpicker" title="Nada selecionado"
-                                data-live-search="true" data-actions-box="true" tabindex="-98">
-                                <option class="bs-title-option" value="">Selecione a marca</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select data-container="body" class="form-control selectpicker" title="Nada selecionado"
+                            <select data-container="body" id="category_input"class="form-control selectpicker" title="Nada selecionado"
                                 data-live-search="true" data-actions-box="true" tabindex="-98">
                                 <option class="bs-title-option" value="">Selecione a categoria</option>
+                                <option class="bs-title-option" value="">Todas</option>
                             </select>
                         </div>
-                        <div id="div_valores">
+                        <!-- <div id="div_valores">
                             <span>
                                 $
                             </span>
@@ -437,8 +442,8 @@
                                 $
                             </span>
                             <input type="text" placeholder="Até">
-                        </div>
-                        <button>
+                        </div> -->
+                        <button style="border-radius: 10px;" id="button_category">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-search" viewBox="0 0 16 16">
                                 <path
@@ -571,103 +576,13 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" >
                     <aside id="reviewed_itens">
                         <div id="itens_recomend">
-                            <p>Pesquisas recentes</p>
+                            <h1 style="font-size: 1.3rem; margin:20px 0;">Pesquisas recentes</h1>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 div_image_product_review">
-                                <img style="width: 80%;"
-                                    src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109226518/79b7abc7f8.jpg"
-                                    alt="">
-                            </div>
-                            <div class="col-lg-6">
-                                <p href="">Piercing ferradura com strass. </p>
-                                <p><i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span>(29)</span>
-                                </p>
-                                <p>
-                                    <b>
-                                        R$:20,00
-                                    </b>
-                                </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-lg-6 div_image_product_review">
-                                <img style="width: 80%;"
-                                    src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/109469738/d13cffb058.jpg"
-                                    alt="">
-                            </div>
-                            <div class="col-lg-6">
-                                <p href="">Piercing de umbigo zircônia pendurada. </p>
-                                <p><i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span>(40)</span>
-                                </p>
-                                <p>
-                                    <b>
-                                        R$:35,00
-                                    </b>
-                                </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-lg-6 div_image_product_review">
-                                <img style="width: 80%;"
-                                    src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/108437512/80d52ce101.jpg"
-                                    alt="">
-                            </div>
-                            <div class="col-lg-6">
-                                <p href="">Argola para nariz(aba nasal) </p>
-                                <p><i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span>(25)</span>
-                                </p>
-                                <p>
-                                    <b>
-                                        R$:20,00
-                                    </b>
-                                </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-lg-6 div_image_product_review">
-                                <img style="width: 80%;"
-                                    src="https://cdn.awsli.com.br/600x450/1651/1651494/produto/66012023/480e177902.jpg"
-                                    alt="">
-                            </div>
-                            <div class="col-lg-6">
-                                <p href="">Piercing Barbell Curvo (Banana) </p>
-                                <p><i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
+                        <div id="products_recomend">
 
-
-                                    <span>(63)</span>
-                                </p>
-                                <p>
-                                    <b>
-                                        R$:30,00
-                                    </b>
-                                </p>
-                            </div>
                         </div>
                     </aside>
                     <div id="div_newsletter">
@@ -741,7 +656,30 @@
 
     </footer>
 
-
+    <!-- <button type="button" class="btn btn-primary" >
+        Launch demo modal
+      </button> -->
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="Detalhes do produto" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Detalhes do produto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="div_produto_detalhe">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
