@@ -177,8 +177,9 @@ $("#button_category").click(() => {
 });
 
 function informacoesProduto(product) {
-  console.log(product);
-
+  let div_modal_produto = document.getElementById("div_produto_detalhe");
+  // div_modal_produto.textContent = "";
+  div_modal_produto.innerHTML = '<div class="loader"></div>';
   fetch(`https://fakestoreapi.com/products/${product}`)
     .then((res) => res.json())
     .then((json) => {
@@ -187,8 +188,7 @@ function informacoesProduto(product) {
       let numeroQuebrado = false;
       let estrelaPelaMetade = false;
       let estralasVazias = 0;
-      let div_modal_produto = document.getElementById("div_produto_detalhe");
-      div_modal_produto.textContent = "";
+
       htmlRate = "";
       let i = 0;
       if (rate < Math.trunc(json.rating.rate)) {
@@ -215,11 +215,13 @@ function informacoesProduto(product) {
       }
       html_div_modal = ` <div id="${
         json.id
-      }"class="col-lg-3 div_product_container" onclick="informacoesProduto(this.id)" data-toggle="modal" data-target="#exampleModal">
-          <div class="col-lg-12 div_product_content">
-              <img src="${json.image}"
-                  alt="">
-              <p href="">${json.title}</p>
+      }"class="col-lg-12 div_product_details" style="display:flex;aling-itens:center;justify-content:center;max-width:"400px;" onclick="informacoesProduto(this.id)" data-toggle="modal" data-target="#exampleModal">
+          <div class="col-lg-12 div_product_details_content">
+            <div class="div_image_product_details_content">
+            <img src="${json.image}" id ="produto_imagem"
+            alt="">
+            </div>
+              <p href="" style="margin-top:20px">${json.description}</p>
               <p>
                   ${htmlRate}
                   ${json.rating.rate}
@@ -233,6 +235,10 @@ function informacoesProduto(product) {
               </p>
           </div>
       </div>`;
-      div_modal_produto.innerHTML += html_div_modal;
+      let produto_imagem = document.getElementById("produto_imagem");
+      setTimeout(() => {
+        div_modal_produto.innerHTML = html_div_modal;
+      }, 1000);
+      // produto_imagem.onload = () => {};
     });
 }

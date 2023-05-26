@@ -12,7 +12,11 @@
     p {
         margin: 0;
     }
-
+    #div_produto_detalhe{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     #container_principal {
         padding: 12px;
     }
@@ -45,6 +49,19 @@
         max-width: 615px;
     }
 
+    .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+    }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
     header img {
         width: 15vw;
     }
@@ -195,8 +212,7 @@
     }
 
     .div_product_container {
-        width: 120px;
-        height: 290px;
+
         margin: 20px;
         border-style: solid;
         border: 1.5px;
@@ -204,23 +220,53 @@
         box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
         max-width: 254px;
     }
+    .div_product_details{
+        /* height: 290px; */
+        border-style: solid;
+        border: 1.5px;
+        padding: 15px 15px 25px 15px;
+        box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+        /* max-width: 40%; */
+        width: 100%;
+        height: 100%;
+    }
 
     .div_product_content {
+        width: 100%;
+        height: 100%;
         justify-content: center;
         display: flex;
-        height: 173px;
+        /* height: 173px; */
         display: flex;
         flex-direction: column;
         font-size: 0.9rem;
     }
-
+    
     .div_product_content img {
-        margin-top: 74px;
         margin-bottom: 5px;
         border-radius: 50px;
-        height: 124%;
-        max-height: 149px;
-        width: 88%;
+        /* height: 124%; */
+        /* max-height: 149px; */
+        width: 70%;
+    }
+
+    .div_product_details_content {
+        margin:0;
+        justify-content: center;
+        display: flex;
+        /* height: 173px; */
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
+    .div_image_product_details_content {
+        height: 50%;
+    }
+    .div_product_details_content img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        object-fit: contain;
     }
 
     .div_product_content p {
@@ -671,11 +717,12 @@
               </button>
             </div>
             <div class="modal-body" id="div_produto_detalhe">
-              
+                <div class="loader"></div>
+
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
